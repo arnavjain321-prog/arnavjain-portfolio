@@ -2,217 +2,432 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Arnav Jain – Data Science Portfolio</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arnav Jain – Portfolio</title>
-
     <style>
-        body {
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background: #ffffff;
-            color: #333;
         }
 
-        .container {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            max-width: 1100px;
-            margin: 60px auto;
-            gap: 50px;
-            padding: 0 30px;
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #222;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #0b63ce;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            display: flex;
+            min-height: 100vh;
         }
 
         /* LEFT SIDEBAR */
+
         .sidebar {
-            text-align: left;
+            width: 320px;
+            background-color: #ffffff;
+            border-right: 1px solid #e0e0e0;
+            padding: 40px 32px;
+            position: fixed;
+            top: 0;
+            bottom: 0;
         }
 
-        .profile-pic {
-            width: 170px;
-            height: 170px;
+        .profile-photo {
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center 20%;
-            /* ↑ moves frame upward so the grad cap shows */
             display: block;
-            margin-bottom: 20px;
+            margin: 0 auto 24px auto;
         }
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 8px;
-            margin-top: 0;
+        .name {
+            font-size: 28px;
+            font-weight: 700;
+            text-align: left;
+            margin-bottom: 4px;
         }
 
-        .degree {
+        .title {
             font-size: 16px;
-            color: #444;
-            margin-bottom: 18px;
-        }
-
-        .school-logos img {
-            height: 34px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-        .sidebar a {
-            color: #0366d6;
-            text-decoration: none;
-            font-size: 15px;
-        }
-
-        .sidebar a:hover {
-            text-decoration: underline;
-        }
-
-        /* MAIN CONTENT */
-        .main h2 {
-            font-size: 22px;
-            margin-top: 0;
+            color: #555;
             margin-bottom: 12px;
         }
 
-        .headline {
-            margin-top: 0;
-            margin-bottom: 6px;
+        .tagline {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
         }
 
-        .summary {
-            font-size: 15px;
-            line-height: 1.55;
-            color: #444;
-            margin-bottom: 28px;
-            max-width: 600px;
+        .logo-row {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
         }
 
-        .main section {
+        .school-logo {
+            width: 30px;
+            height: 30px;
+            object-fit: contain;
+        }
+
+        .contact {
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .contact div {
+            margin-bottom: 4px;
+        }
+
+        .sidebar-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #777;
+            margin-top: 24px;
+            margin-bottom: 8px;
+        }
+
+        .skills-list {
+            list-style: none;
+            font-size: 13px;
+        }
+
+        .skills-list li {
+            margin-bottom: 4px;
+        }
+
+        /* RIGHT CONTENT */
+
+        .content-wrapper {
+            margin-left: 320px;
+            padding: 40px 40px 60px 40px;
+            flex: 1;
+        }
+
+        .section {
             margin-bottom: 36px;
         }
 
-        .main a {
-            color: #0366d6;
-            text-decoration: none;
+        .section h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 4px;
         }
 
-        .main a:hover {
-            text-decoration: underline;
+        .item {
+            margin-bottom: 16px;
         }
 
-        .job-title {
-            font-weight: bold;
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+        }
+
+        .item-title {
+            font-weight: 600;
             font-size: 15px;
         }
 
-        .job-location {
-            font-size: 14px;
+        .item-meta {
+            font-size: 13px;
             color: #666;
         }
 
-        .job-desc {
+        .item-subtitle {
             font-size: 14px;
-            line-height: 1.5;
-            margin-bottom: 14px;
+            color: #444;
+            margin-top: 2px;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #444;
+            margin-top: 6px;
+        }
+
+        .tech-stack {
+            font-size: 13px;
+            color: #666;
+            margin-top: 4px;
+        }
+
+        .project-link {
+            font-size: 13px;
+            margin-top: 4px;
+        }
+
+        ul.bullets {
+            margin-left: 18px;
+            margin-top: 4px;
+            font-size: 14px;
+        }
+
+        ul.bullets li {
+            margin-bottom: 3px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .page {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            .content-wrapper {
+                margin-left: 0;
+                padding: 24px 16px 40px 16px;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
-
 <body>
+<div class="page">
+    <!-- LEFT SIDEBAR -->
+    <aside class="sidebar">
+        <img src="assets/me.jpg" alt="Arnav Jain" class="profile-photo">
 
-    <div class="container">
-
-        <!-- LEFT SIDEBAR -->
-        <div class="sidebar">
-
-            <img src="assets/me.jpg" alt="Arnav Jain" class="profile-pic">
-
-            <h1>Arnav Jain</h1>
-            <div class="degree">MS in Data Science • University of Virginia</div>
-
-            <a href="https://www.linkedin.com/in/arnavjain2026/" target="_blank">
-                LinkedIn Profile
-            </a>
+        <h1 class="name">Arnav Jain</h1>
+        <div class="title">MS in Data Science · University of Virginia</div>
+        <div class="tagline">
+            Data science graduate student interested in applied analytics across sports, finance,
+            and product strategy — from messy data to modeling to clear, actionable insights.
         </div>
 
-        <!-- MAIN CONTENT -->
-        <div class="main">
+        <div class="logo-row">
+            <img src="assets/uva_logo.jpeg" alt="UVA logo" class="school-logo">
+            <img src="assets/unc_logo.jpeg" alt="UNC logo" class="school-logo">
+        </div>
 
-            <h2 class="headline">Data Science & Analytics</h2>
+        <div class="contact">
+            <div><strong>Email:</strong> <a href="mailto:mhq8ka@virginia.edu">mhq8ka@virginia.edu</a></div>
+            <div><strong>GitHub:</strong> <a href="https://github.com/arnavjain321-prog" target="_blank">arnavjain321-prog</a></div>
+            <div><strong>Portfolio:</strong> <a href="https://arnavjain321-prog.github.io/arnavjain-portfolio/" target="_blank">view site</a></div>
+            <div><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/arnavjain2026" target="_blank">arnavjain2026</a></div>
+        </div>
 
-            <p class="summary">
-                Data science graduate student with experience in predictive modeling, 
-                data engineering, statistical analysis, and end-to-end project work. Skilled at transforming raw data 
-                into actionable insights through clean modeling, effective visualization, and clear communication. 
-                Strong interest in applying analytics across business, sports, and technology.
-            </p>
+        <div class="sidebar-section-title">Technical Skills</div>
+        <ul class="skills-list">
+            <li><strong>Languages:</strong> Python, SQL, R</li>
+            <li><strong>Data:</strong> pandas, NumPy, SQL (PostgreSQL/Hive)</li>
+            <li><strong>ML / Stats:</strong> scikit-learn, statsmodels, regression & classification</li>
+            <li><strong>Viz:</strong> matplotlib, seaborn, Tableau</li>
+            <li><strong>Tools:</strong> Git/GitHub, Jupyter, VS Code</li>
+        </ul>
+    </aside>
 
-            <!-- EDUCATION -->
-            <section>
-                <h2>Education</h2>
+    <!-- RIGHT CONTENT -->
+    <main class="content-wrapper">
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
 
-                <div class="school-logos">
-                    <img src="assets/unc_logo.jpeg" alt="UNC Logo">
-                    <img src="assets/uva_logo.jpeg" alt="UVA Logo">
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">University of Virginia</div>
+                    <div class="item-meta">Charlottesville, VA · Expected Aug 2026</div>
                 </div>
+                <div class="item-subtitle">M.S. in Data Science</div>
+                <div class="item-description">
+                    Coursework: Machine Learning, Data Engineering, Advanced Cloud Computing, Data Visualization.
+                </div>
+            </div>
 
-                <p><strong>M.S., Data Science</strong> — University of Virginia (2026)</p>
-                <p><strong>B.S., Information Science</strong> — UNC Chapel Hill (2024)</p>
-            </section>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">University of North Carolina at Chapel Hill</div>
+                    <div class="item-meta">Chapel Hill, NC · May 2024</div>
+                </div>
+                <div class="item-subtitle">B.S. in Information Science · Minor in Data Science</div>
+            </div>
+        </section>
 
-            <!-- PROJECTS -->
-            <section>
-                <h2>Projects</h2>
+        <!-- Experience -->
+        <section class="section">
+            <h2>Experience</h2>
 
-                <p><a href="https://github.com/arnavjain321-prog/manutd-midfield-analysis-2025-26" target="_blank">
-                    Manchester United Midfield Analysis (2025–26)
-                </a></p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Application Support Analyst · Citibank</div>
+                    <div class="item-meta">Tampa, FL · June 2024 – May 2025</div>
+                </div>
+                <div class="item-subtitle">
+                    Supported 15+ critical applications, combining incident management, automation, and reporting.
+                </div>
+                <ul class="bullets">
+                    <li>Resolved 200+ monthly ServiceNow incidents with SLA adherence for 1,000+ clients.</li>
+                    <li>Automated health checks and SQL/Hadoop workflows, reducing issue resolution time by 15%.</li>
+                    <li>Created Tableau views for trend analysis and root-cause investigation.</li>
+                </ul>
+            </div>
 
-                <p><a href="https://github.com/arnavjain321-prog/manutd-2007-08-style-profile" target="_blank">
-                    Manchester United 2007–08 Style Profile
-                </a></p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Data Analyst Intern · Xylem</div>
+                    <div class="item-meta">Morrisville, NC · May 2023 – Aug 2023</div>
+                </div>
+                <div class="item-subtitle">
+                    Built dashboards and ad-hoc analyses for product and resource planning.
+                </div>
+                <ul class="bullets">
+                    <li>Analyzed SQL datasets to track 15+ KPIs across product development and staffing.</li>
+                    <li>Developed Tableau dashboards for utilization, timelines, and risk, used by cross-functional teams.</li>
+                </ul>
+            </div>
 
-                <p><a href="https://github.com/arnavjain321-prog/external-factors-football-win-prediction" target="_blank">
-                    External Factors & Football Win Probability
-                </a></p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Business Analyst Intern · QUVI</div>
+                    <div class="item-meta">Chapel Hill, NC · May 2022 – Aug 2022</div>
+                </div>
+                <div class="item-subtitle">
+                    Early-stage startup internship focused on market research and growth strategy.
+                </div>
+                <ul class="bullets">
+                    <li>Analyzed survey and usage data to identify high-value customer segments.</li>
+                    <li>Supported go-to-market experiments and KPI tracking for leadership.</li>
+                </ul>
+            </div>
+        </section>
 
-                <p><a href="https://arnavjain321-prog.github.io/everytouch/" target="_blank">
-                    Every Touch — Football Highlight Generator
-                </a></p>
+        <!-- Projects -->
+        <section class="section">
+            <h2>Projects</h2>
 
-                <p><a href="https://github.com/arnavjain321-prog/amazon-risk" target="_blank">
-                    Amazon Risk Modeling
-                </a></p>
-            </section>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Manchester United Midfield Analysis (2025–26)</div>
+                    <div class="item-meta">Football analytics · Python</div>
+                </div>
+                <div class="item-description">
+                    Positioning, usage, and output comparison for Bruno Fernandes and Casemiro, using
+                    per-90 metrics to profile roles, shot creation, and defensive contribution.
+                </div>
+                <div class="tech-stack">Technologies: Python, pandas, matplotlib, seaborn</div>
+                <div class="project-link">
+                    GitHub: <!-- replace '#' with your repo URL -->
+                    <a href="#" target="_blank">View repository</a>
+                </div>
+            </div>
 
-            <!-- EXPERIENCE -->
-            <section>
-                <h2>Experience</h2>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Manchester United 2007–08 Style Profile</div>
+                    <div class="item-meta">Football analytics · Python</div>
+                </div>
+                <div class="item-description">
+                    Recreated the attacking style of the 2007–08 Manchester United front line with
+                    shot volume, efficiency, and chance creation profiles for Rooney, Ronaldo, and Tevez.
+                </div>
+                <div class="tech-stack">Technologies: Python, pandas, matplotlib</div>
+                <div class="project-link">
+                    GitHub:
+                    <a href="https://github.com/arnavjain321-prog/manutd-2007-08-style-profile" target="_blank">
+                        manutd-2007-08-style-profile
+                    </a>
+                </div>
+            </div>
 
-                <p class="job-title">Application Support Analyst — Citibank</p>
-                <p class="job-location">Tampa, FL · June 2024 – May 2025</p>
-                <p class="job-desc">
-                    Resolved ServiceNow incidents for critical applications, executed health checks, automated SQL/Hadoop 
-                    workflows, and helped reduce issue resolution times.
-                </p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">External Factors & Football Win Probability</div>
+                    <div class="item-meta">Classification · Python</div>
+                </div>
+                <div class="item-description">
+                    Modeled match outcome probabilities using weather, travel, and home/away context to quantify
+                    how external factors shift win odds beyond team strength alone.
+                </div>
+                <div class="tech-stack">Technologies: Python, pandas, scikit-learn, ROC/Calibration analysis</div>
+                <div class="project-link">
+                    GitHub:
+                    <a href="https://github.com/arnavjain321-prog/external-factors-football-win-prediction" target="_blank">
+                        external-factors-football-win-prediction
+                    </a>
+                </div>
+            </div>
 
-                <p class="job-title">Data Analyst Intern — Xylem</p>
-                <p class="job-location">Remote · May 2023 – Aug 2023</p>
-                <p class="job-desc">
-                    Built dashboards, automated reporting, and improved data pipeline efficiency across multiple teams.
-                </p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Credit Approval Optimization – Red Ventures Case Study</div>
+                    <div class="item-meta">Logistic regression · Optimization</div>
+                </div>
+                <div class="item-description">
+                    End-to-end case study forecasting credit approval for three lending partners, estimating
+                    expected revenue per application, and proposing a routing strategy to maximize approved revenue.
+                </div>
+                <div class="tech-stack">Technologies: Python, pandas, scikit-learn, logistic regression</div>
+                <div class="project-link">
+                    GitHub:
+                    <a href="https://github.com/arnavjain321-prog/credit-approval-optimization-red-ventures" target="_blank">
+                        credit-approval-optimization-red-ventures
+                    </a>
+                </div>
+            </div>
 
-                <p class="job-title">Business Analyst — QUVI</p>
-                <p class="job-location">Remote · May 2022 - Aug 2022</p>
-                <p class="job-desc">
-                    Supported early-stage startup operations with data cleaning, customer insights, and financial reporting.
-                </p>
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Amazon Risk Modeling on the S&amp;P 500</div>
+                    <div class="item-meta">Risk analytics · Python</div>
+                </div>
+                <div class="item-description">
+                    Quantified tail risk for Amazon within the S&amp;P 500 using non-parametric
+                    methods, bootstrapped Value-at-Risk/Expected Shortfall, and scenario analysis.
+                </div>
+                <div class="tech-stack">Technologies: Python, pandas, NumPy, bootstrapping</div>
+                <div class="project-link">
+                    GitHub: <!-- replace '#' with your repo URL -->
+                    <a href="#" target="_blank">View repository</a>
+                </div>
+            </div>
 
-            </section>
-
-        </div>
-
-    </div>
-
+            <div class="item">
+                <div class="item-header">
+                    <div class="item-title">Every Touch – Football Highlight Landing Page</div>
+                    <div class="item-meta">Web · HTML/CSS</div>
+                </div>
+                <div class="item-description">
+                    Simple marketing site for a football highlight automation tool, featuring a custom logo,
+                    responsive layout, and contact form integration.
+                </div>
+                <div class="tech-stack">Technologies: HTML, CSS, GitHub Pages</div>
+                <div class="project-link">
+                    GitHub: <!-- replace '#' with your repo URL -->
+                    <a href="#" target="_blank">View repository</a>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 </body>
 </html>
