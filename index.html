@@ -48,16 +48,15 @@
     }
 
     .profile-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: top;
-  display: block;
-  margin: 0 auto 16px auto;
-  border: 2px solid #e5e7eb;
-}
-
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      margin: 0 auto 16px auto;
+      border: 2px solid #e5e7eb;
+    }
 
     .name {
       font-size: 1.6rem;
@@ -205,7 +204,6 @@
   <div class="page">
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
-      <!-- Make sure assets/me.jpg is your new UNC grad photo -->
       <img src="assets/me.jpg" alt="Arnav Jain" class="profile-photo" />
 
       <div>
@@ -216,7 +214,7 @@
           <img src="assets/unc_logo.jpeg" alt="UNC logo" />
         </div>
         <p class="summary">
-          Data science graduate student interested in applied analytics across sports, finance, and product strategy — from messy data to modeling to clear, actionable insights.
+          Software engineer and data science graduate student building production systems at Heartbeat Intel and exploring applied analytics across sports, finance, and public policy.
         </p>
       </div>
 
@@ -232,154 +230,30 @@
       <div>
         <div class="sidebar-section-title">Technical Skills</div>
         <div class="sidebar-list">
-          <p><span class="label">Languages:</span> Python, SQL, R</p>
-          <p><span class="label">Tools:</span> pandas, NumPy, scikit-learn, Matplotlib, Jupyter, Git, Tableau</p>
+          <p><span class="label">Languages:</span> Python, SQL, R, TypeScript</p>
+          <p><span class="label">Frontend:</span> React, Chakra UI, Redux</p>
+          <p><span class="label">Backend:</span> Django, PostgreSQL</p>
+          <p><span class="label">Tools:</span> pandas, NumPy, scikit-learn, Git, Tableau, AWS (EC2, S3), Docker</p>
         </div>
       </div>
     </aside>
 
     <!-- RIGHT CONTENT -->
     <main class="content">
-      <!-- Projects -->
-      <section class="section">
-        <h2>Projects</h2>
-
-        <!-- SNAP Policy Generosity -->
-      <div class="item">
-        <div class="item-header">
-          <div class="item-title">SNAP Policy Generosity Across U.S. States</div>
-          <div class="item-meta">Policy analytics · Python</div>
-        </div>
-        <p class="item-description">
-          Modeled state-level variation in SNAP benefit generosity using socioeconomic, demographic, and cost-of-living indicators.
-          Built a unified dataset from USDA, ACS, and BLS sources and applied multi-class classification to identify factors associated
-          with higher per-capita SNAP benefits and participation. Includes an interactive dashboard to explore state-level patterns.
-        </p>
-        <p class="item-tech">
-          Technologies: Python, pandas, scikit-learn, Jupyter, Plotly Dash
-        </p>
-        <p class="item-links">
-          GitHub:
-          <a href="https://github.com/arnavjain321-prog/snap-policy-generosity" target="_blank">View repository</a>
-          <br>
-          Dashboard:
-          <a href="https://ds-6021-final-project-snap.onrender.com/" target="_blank">Open dashboard</a>
-        </p>
-      </div>
-
-        
-        <!-- Man Utd Midfield -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">Manchester United Midfield Analysis (2025–26)</div>
-            <div class="item-meta">Football analytics · Python</div>
-          </div>
-          <p class="item-description">
-            Built a midfield unit profile for Manchester United using passing, progression, and defensive metrics to compare Bruno Fernandes, Casemiro, and teammates over a season.
-          </p>
-          <p class="item-tech">
-            Technologies: Python, pandas, matplotlib, seaborn
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://github.com/arnavjain321-prog/manutd-midfield-analysis-2025-26" target="_blank">View repository</a>
-          </p>
-        </div>
-
-        <!-- Man Utd 2007-08 -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">Manchester United 2007–08 Style Profile</div>
-            <div class="item-meta">Football analytics · Python</div>
-          </div>
-          <p class="item-description">
-            Recreated the attacking style of the 2007–08 Manchester United front line with shot volume, efficiency, and chance creation profiles for Rooney, Ronaldo, and Tevez.
-          </p>
-          <p class="item-tech">
-            Technologies: Python, pandas, matplotlib
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://github.com/arnavjain321-prog/manutd-2007-08-style-profile" target="_blank">View repository</a>
-          </p>
-        </div>
-
-        <!-- External Factors Win Prob -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">External Factors &amp; Football Win Probability</div>
-            <div class="item-meta">Classification · Python</div>
-          </div>
-          <p class="item-description">
-            Modeled match outcome probabilities using weather, travel, and home/away context to quantify how external factors shift win odds beyond team strength alone.
-          </p>
-          <p class="item-tech">
-            Technologies: Python, pandas, scikit-learn, ROC/Calibration analysis
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://github.com/arnavjain321-prog/external-factors-football-win-prediction" target="_blank">View repository</a>
-          </p>
-        </div>
-
-        <!-- Red Ventures Credit Approval -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">Bankrate Personal Loan Approval Optimization</div>
-            <div class="item-meta">Logistic regression · Optimization</div>
-          </div>
-          <p class="item-description">
-            End-to-end case study forecasting credit approval for three lending partners, estimating expected revenue per application, and proposing a routing strategy to maximize approved revenue.
-          </p>
-          <p class="item-tech">
-            Technologies: Python, pandas, scikit-learn, logistic regression
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://github.com/arnavjain321-prog/credit-approval-optimization-red-ventures" target="_blank">View repository</a>
-          </p>
-        </div>
-
-        <!-- Amazon Risk -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">Amazon Risk Modeling on the S&amp;P 500</div>
-            <div class="item-meta">Risk analytics · Python</div>
-          </div>
-          <p class="item-description">
-            Quantified tail risk for Amazon within the S&amp;P 500 using non-parametric methods, bootstrapped Value-at-Risk/Expected Shortfall, and scenario analysis.
-          </p>
-          <p class="item-tech">
-            Technologies: Python, pandas, NumPy, bootstrapping
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://github.com/arnavjain321-prog/amazon-risk" target="_blank">View repository</a>
-          </p>
-        </div>
-
-        <!-- Every Touch -->
-        <div class="item">
-          <div class="item-header">
-            <div class="item-title">Every Touch — Football Highlight Landing Page</div>
-            <div class="item-meta">Web · HTML/CSS</div>
-          </div>
-          <p class="item-description">
-            Simple marketing site for a football highlight automation tool, featuring a custom logo, responsive layout, and contact form integration.
-          </p>
-          <p class="item-tech">
-            Technologies: HTML, CSS, GitHub Pages
-          </p>
-          <p class="item-links">
-            GitHub:
-            <a href="https://arnavjain321-prog.github.io/everytouch/" target="_blank">View repository</a>
-          </p>
-        </div>
-      </section>
 
       <!-- Experience -->
       <section class="section">
         <h2>Experience</h2>
+
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Software Engineer — Heartbeat Intel</div>
+            <div class="item-meta">Charlottesville, VA · April 2026 – Present</div>
+          </div>
+          <p class="item-description">
+            Building and maintaining a full-stack VC research platform (React/TypeScript + Django) with a multi-tenant PostgreSQL backend, contributing across frontend features, API integration, database schema design, and end-to-end release management.
+          </p>
+        </div>
 
         <div class="item">
           <div class="item-header">
@@ -412,6 +286,133 @@
         </div>
       </section>
 
+      <!-- Projects -->
+      <section class="section">
+        <h2>Projects</h2>
+
+        <!-- Every Touch -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Every Touch — Football Highlight Extraction</div>
+            <div class="item-meta">Computer vision · Python</div>
+          </div>
+          <p class="item-description">
+            Building an automated highlight extraction pipeline for match footage using YOLOv8 object detection and ByteTrack multi-object tracking. Engineering a Python workflow for video ingestion, frame parsing with FFmpeg, and timestamped event generation. Experimenting with re-identification and keypoint-based tracking to reduce ID switches under player occlusion.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, YOLOv8, ByteTrack, FFmpeg, OpenCV
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://arnavjain321-prog.github.io/everytouch/" target="_blank">View repository</a>
+          </p>
+        </div>
+
+        <!-- SNAP Policy Generosity -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">SNAP Policy Generosity Across U.S. States</div>
+            <div class="item-meta">Policy analytics · Python</div>
+          </div>
+          <p class="item-description">
+            Modeled state-level variation in SNAP benefit generosity using socioeconomic, demographic, and cost-of-living indicators.
+            Built a unified dataset from USDA, ACS, and BLS sources and applied multi-class classification to identify factors associated
+            with higher per-capita SNAP benefits and participation. Includes an interactive dashboard to explore state-level patterns.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, scikit-learn, Jupyter, Plotly Dash
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/snap-policy-generosity" target="_blank">View repository</a><br>
+            Dashboard: <a href="https://ds-6021-final-project-snap.onrender.com/" target="_blank">Open dashboard</a>
+          </p>
+        </div>
+
+        <!-- Man Utd Midfield -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Manchester United Midfield Analysis (2025–26)</div>
+            <div class="item-meta">Football analytics · Python</div>
+          </div>
+          <p class="item-description">
+            Built a midfield unit profile for Manchester United using passing, progression, and defensive metrics to compare Bruno Fernandes, Casemiro, and teammates over a season.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, matplotlib, seaborn
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/manutd-midfield-analysis-2025-26" target="_blank">View repository</a>
+          </p>
+        </div>
+
+        <!-- Man Utd 2007-08 -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Manchester United 2007–08 Style Profile</div>
+            <div class="item-meta">Football analytics · Python</div>
+          </div>
+          <p class="item-description">
+            Recreated the attacking style of the 2007–08 Manchester United front line with shot volume, efficiency, and chance creation profiles for Rooney, Ronaldo, and Tevez.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, matplotlib
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/manutd-2007-08-style-profile" target="_blank">View repository</a>
+          </p>
+        </div>
+
+        <!-- External Factors Win Prob -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">External Factors &amp; Football Win Probability</div>
+            <div class="item-meta">Classification · Python</div>
+          </div>
+          <p class="item-description">
+            Modeled match outcome probabilities using weather, travel, and home/away context to quantify how external factors shift win odds beyond team strength alone.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, scikit-learn, ROC/Calibration analysis
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/external-factors-football-win-prediction" target="_blank">View repository</a>
+          </p>
+        </div>
+
+        <!-- Bankrate Credit Approval -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Bankrate Personal Loan Approval Optimization</div>
+            <div class="item-meta">Logistic regression · Optimization</div>
+          </div>
+          <p class="item-description">
+            End-to-end case study forecasting credit approval for three lending partners, estimating expected revenue per application, and proposing a routing strategy to maximize approved revenue.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, scikit-learn, logistic regression
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/credit-approval-optimization-red-ventures" target="_blank">View repository</a>
+          </p>
+        </div>
+
+        <!-- Amazon Risk -->
+        <div class="item">
+          <div class="item-header">
+            <div class="item-title">Amazon Risk Modeling on the S&amp;P 500</div>
+            <div class="item-meta">Risk analytics · Python</div>
+          </div>
+          <p class="item-description">
+            Quantified tail risk for Amazon within the S&amp;P 500 using non-parametric methods, bootstrapped Value-at-Risk/Expected Shortfall, and scenario analysis.
+          </p>
+          <p class="item-tech">
+            Technologies: Python, pandas, NumPy, bootstrapping
+          </p>
+          <p class="item-links">
+            GitHub: <a href="https://github.com/arnavjain321-prog/amazon-risk" target="_blank">View repository</a>
+          </p>
+        </div>
+      </section>
+
       <!-- Education -->
       <section class="section">
         <h2>Education</h2>
@@ -419,11 +420,11 @@
         <div class="item">
           <div class="item-header">
             <div class="item-title">University of Virginia</div>
-            <div class="item-meta">Charlottesville, VA · Expected May 2026</div>
+            <div class="item-meta">Charlottesville, VA · Expected Aug 2026</div>
           </div>
           <p class="item-subtitle">M.S. in Data Science</p>
           <p class="item-description">
-            Coursework: Machine Learning, Data Engineering, Advanced Cloud Computing, Data Visualization.
+            Coursework: Deep Learning, Large Language Models, Data Mining &amp; Statistical Learning, Advanced Cloud Computing.
           </p>
         </div>
 
@@ -438,6 +439,7 @@
           </p>
         </div>
       </section>
+
     </main>
   </div>
 </body>
