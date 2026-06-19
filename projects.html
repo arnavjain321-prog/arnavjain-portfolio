@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects · Arnav Jain</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Space+Mono:wght@400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="topbar">
+      <a class="topbar__home" href="index.html">Arnav Jain</a>
+      <nav class="topbar__links">
+        <a href="projects.html" class="is-active">Projects</a>
+        <a href="about.html">About</a>
+      </nav>
+    </header>
+
+    <h1 class="page-title">Projects</h1>
+
+    <div class="filters" id="filters">
+      <button data-cat="all" class="is-active">All Projects</button>
+      <span class="dot">·</span>
+      <button data-cat="ml">ML</button>
+      <span class="dot">·</span>
+      <button data-cat="vision">Vision</button>
+      <span class="dot">·</span>
+      <button data-cat="software">Software</button>
+      <span class="dot">·</span>
+      <button data-cat="analytics">Analytics</button>
+      <span class="dot">·</span>
+      <button data-cat="founder">Founder</button>
+    </div>
+
+    <div class="proj-list" id="projList">
+
+      <div class="proj" data-cats="vision founder">
+        <div class="proj__title"><a href="https://arnavjain321-prog.github.io/everytouch/" target="_blank" rel="noopener">Every Touch</a></div>
+        <div class="proj__desc">Soccer video analytics: YOLOv8 + ByteTrack highlight extraction, plus an independent ML model verification that caught data leakage</div>
+        <div class="proj__cat">Vision · Founder</div>
+        <div class="proj__year">2025</div>
+      </div>
+
+      <div class="proj" data-cats="ml">
+        <div class="proj__title">Voice Deepfake Detection</div>
+        <div class="proj__desc">Capital One sponsored capstone detecting AI-generated voice for transaction auth, using AASIST on the ASVspoof benchmark</div>
+        <div class="proj__cat">ML</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="software">
+        <div class="proj__title">Heartbeat Intel</div>
+        <div class="proj__desc">Full-stack URL intelligence system on a Django and React platform: canonicalization, cross-entity dedup, three-way filters</div>
+        <div class="proj__cat">Software</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="founder software">
+        <div class="proj__title"><a href="https://sustyne.com" target="_blank" rel="noopener">Sustyne</a></div>
+        <div class="proj__desc">IT and AI consulting firm where I lead the AI engineering practice; designed and shipped the brand and company site at sustyne.com</div>
+        <div class="proj__cat">Founder · Software</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="software ml">
+        <div class="proj__title">ettok</div>
+        <div class="proj__desc">A zero-cost faceless short-form video engine: script, edge-tts voiceover, word-synced captions, FFmpeg render, multi-platform metadata</div>
+        <div class="proj__cat">Software · ML</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="software">
+        <div class="proj__title"><a href="https://junoonwellness.com" target="_blank" rel="noopener">Junoon</a></div>
+        <div class="proj__desc">AI wellness coaching app: conversational coach with recommendation and returning-user flows across iOS and backend</div>
+        <div class="proj__cat">Software</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="founder">
+        <div class="proj__title">Status Free Co.</div>
+        <div class="proj__desc">Founder of a lifestyle brand: a published iOS app and e-commerce store, over 1,000 downloads and roughly $5,000 in revenue</div>
+        <div class="proj__cat">Founder</div>
+        <div class="proj__year">2022</div>
+      </div>
+
+      <div class="proj" data-cats="analytics">
+        <div class="proj__title"><a href="https://github.com/arnavjain321-prog/snap-policy-generosity" target="_blank" rel="noopener">SNAP Policy Generosity</a></div>
+        <div class="proj__desc">State-level SNAP benefit modeling with USDA, ACS, and BLS data, a multi-class classifier, and an interactive dashboard</div>
+        <div class="proj__cat">Analytics</div>
+        <div class="proj__year">2025</div>
+      </div>
+
+      <div class="proj" data-cats="analytics">
+        <div class="proj__title"><a href="https://github.com/arnavjain321-prog/amazon-risk" target="_blank" rel="noopener">Amazon Risk Modeling</a></div>
+        <div class="proj__desc">Tail-risk modeling for Amazon within the S&amp;P 500 using bootstrapped Value-at-Risk and Expected Shortfall</div>
+        <div class="proj__cat">Analytics</div>
+        <div class="proj__year">2025</div>
+      </div>
+
+      <div class="proj" data-cats="analytics">
+        <div class="proj__title"><a href="https://github.com/arnavjain321-prog/manutd-midfield-analysis-2025-26" target="_blank" rel="noopener">Man United Midfield Analysis</a></div>
+        <div class="proj__desc">A midfield unit profile using passing, progression, and defensive metrics across a full season</div>
+        <div class="proj__cat">Analytics</div>
+        <div class="proj__year">2026</div>
+      </div>
+
+      <div class="proj" data-cats="analytics">
+        <div class="proj__title"><a href="https://github.com/arnavjain321-prog/external-factors-football-win-prediction" target="_blank" rel="noopener">External Factors &amp; Win Probability</a></div>
+        <div class="proj__desc">A match outcome model quantifying how weather, travel, and venue shift win odds beyond team strength</div>
+        <div class="proj__cat">Analytics</div>
+        <div class="proj__year">2025</div>
+      </div>
+
+    </div>
+    <div class="footer-space"></div>
+  </div>
+
+  <script>
+    (function () {
+      var filters = document.getElementById('filters');
+      var items = Array.prototype.slice.call(document.querySelectorAll('.proj'));
+      filters.addEventListener('click', function (e) {
+        var btn = e.target.closest('button');
+        if (!btn) return;
+        filters.querySelectorAll('button').forEach(function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        var cat = btn.getAttribute('data-cat');
+        items.forEach(function (it) {
+          var show = cat === 'all' || it.getAttribute('data-cats').split(' ').indexOf(cat) !== -1;
+          it.style.display = show ? '' : 'none';
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
