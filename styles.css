@@ -40,7 +40,7 @@ body.landing {
 
 .card {
   position: relative;
-  width: min(540px, 90vw);
+  width: min(640px, 90vw);
   aspect-ratio: 1.78 / 1;
   background-color: var(--card);
   /* subtle cardstock grain */
@@ -50,7 +50,7 @@ body.landing {
     0 1px 0 rgba(255,255,255,0.7) inset,
     0 30px 64px -30px rgba(40,36,28,0.32),
     0 6px 18px -10px rgba(40,36,28,0.20);
-  padding: clamp(22px, 3.6vw, 40px);
+  padding: clamp(24px, 3.8vw, 46px);
   display: grid;
   grid-template-rows: auto 1fr auto;
   font-family: var(--serif);
@@ -62,7 +62,7 @@ body.landing {
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.06em;
-  font-size: clamp(0.74rem, 1.7vw, 0.92rem);
+  font-size: clamp(0.8rem, 1.7vw, 1rem);
   color: var(--ink);
 }
 .card__contact { text-align: right; }
@@ -70,25 +70,17 @@ body.landing {
   display: block;
   font-variant: small-caps;
   letter-spacing: 0.04em;
-  font-size: clamp(0.7rem, 1.5vw, 0.84rem);
+  font-size: clamp(0.74rem, 1.5vw, 0.9rem);
   color: var(--ink);
   line-height: 1.5;
 }
 .card__contact a:hover { color: var(--muted); }
 
-.card__center { display: grid; place-content: center; text-align: center; gap: 7px; }
-.card__name-row { display: flex; align-items: center; justify-content: center; gap: 14px; }
-.card__mark {
-  height: clamp(28px, 3.8vw, 38px);
-  width: auto;
-  display: block;
-  opacity: 0.9;
-  flex: 0 0 auto;
-}
+.card__center { display: grid; place-content: center; text-align: center; gap: 8px; }
 .card__name {
   font-weight: 600;
   letter-spacing: 0.06em;
-  font-size: clamp(1.65rem, 6vw, 2.5rem);
+  font-size: clamp(1.9rem, 6vw, 2.9rem);
   line-height: 1.02;
   text-transform: uppercase;
 }
@@ -96,8 +88,17 @@ body.landing {
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.2em;
-  font-size: clamp(0.7rem, 1.6vw, 0.86rem);
+  font-size: clamp(0.76rem, 1.6vw, 0.94rem);
   color: var(--muted);
+}
+
+.card__bottom { display: flex; justify-content: space-between; align-items: flex-end; }
+.card__mark {
+  height: clamp(36px, 4.6vw, 50px);
+  width: auto;
+  display: block;
+  opacity: 0.9;
+  flex: 0 0 auto;
 }
 
 .card__nav { display: flex; flex-direction: column; align-items: flex-end; gap: 2px; }
@@ -105,7 +106,7 @@ body.landing {
   font-variant: small-caps;
   text-transform: lowercase;
   letter-spacing: 0.05em;
-  font-size: clamp(0.82rem, 1.7vw, 1rem);
+  font-size: clamp(0.88rem, 1.7vw, 1.1rem);
   position: relative;
 }
 .card__nav a::after {
@@ -116,7 +117,6 @@ body.landing {
 
 @media (max-width: 560px) {
   .card { aspect-ratio: 1.5 / 1; }
-  .card__name-row { gap: 10px; }
 }
 
 /* ============================================================
