@@ -172,8 +172,9 @@ body.landing {
 .proj__title a:hover { text-decoration: underline; }
 .proj__desc {
   color: var(--muted); font-size: 0.92rem;
-  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  white-space: nowrap; overflow: hidden;
 }
+.proj__desc-inner { display: inline-block; white-space: nowrap; will-change: transform; }
 .proj__cat {
   font-style: italic; font-size: 0.72rem; letter-spacing: 0.08em;
   text-transform: uppercase; color: var(--faint);
@@ -183,7 +184,8 @@ body.landing {
 
 @media (max-width: 720px) {
   .proj { grid-template-columns: 1fr auto; gap: 4px 14px; padding: 16px 4px; }
-  .proj__desc { white-space: normal; grid-column: 1 / -1; order: 3; }
+  .proj__desc { white-space: normal; overflow: visible; grid-column: 1 / -1; order: 3; }
+  .proj__desc-inner { white-space: normal; transform: none !important; }
   .proj__cat  { order: 2; }
   .proj__year { order: 2; }
 }

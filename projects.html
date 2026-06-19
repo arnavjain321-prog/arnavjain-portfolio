@@ -148,6 +148,32 @@
         });
       });
     })();
+
+    // hover marquee: slide truncated descriptions left to reveal the full text
+    (function () {
+      document.querySelectorAll('.proj').forEach(function (row) {
+        var desc = row.querySelector('.proj__desc');
+        if (!desc) return;
+        var inner = document.createElement('span');
+        inner.className = 'proj__desc-inner';
+        inner.textContent = desc.textContent;
+        desc.textContent = '';
+        desc.appendChild(inner);
+
+        row.addEventListener('mouseenter', function () {
+          var overflow = inner.scrollWidth - desc.clientWidth;
+          if (overflow > 2) {
+            var dur = Math.max(600, Math.round(overflow * 16));
+            inner.style.transition = 'transform ' + dur + 'ms linear';
+            inner.style.transform = 'translateX(-' + overflow + 'px)';
+          }
+        });
+        row.addEventListener('mouseleave', function () {
+          inner.style.transition = 'transform 300ms ease';
+          inner.style.transform = 'translateX(0)';
+        });
+      });
+    })();
   </script>
 </body>
 </html>
